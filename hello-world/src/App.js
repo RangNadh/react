@@ -6,13 +6,15 @@ import Message from './components/Message';
 import Counter from './components/Counter';
 import FunctionClick from './components/FunctionClick';
 import ClassClick from './components/ClassClick';
+import EventBind from './components/EventBind';
 
 function App() {
   return (
     <div className="App">
-      <FunctionClick />
+      <EventBind />
+      {/* <FunctionClick />
       <ClassClick />
-      {/* <Counter />
+      <Counter />
       <Message /> 
       <Greet name="Bruce" heroName="Batman">
         <p>This is a children props</p>
