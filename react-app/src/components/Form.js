@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class Form extends Component {
+class Form extends Component {
 
     constructor(props) {
       super(props)
@@ -8,47 +8,54 @@ export class Form extends Component {
       this.state = {
          username: '',
          comments: '',
-         topic: ''
+         topic: 'react'
       }
     }
 
-    handleUsernameChange = (event) => {
+    handleUsernameChange = event => {
         this.setState({
             username: event.target.value
         })
     }
 
-    handleCommentsChange = (event) => {
+    handleCommentsChange = event => {
         this.setState({
             comments: event.target.value
         })
     }
 
-    handleTopicChange = (event) => {
+    handleTopicChange = event => {
         this.setState({
             topic: event.target.value
         })
     }
 
+    handleSubmit = event => {
+        alert(` ${this.state.username} ${this.state.comments} ${this.state.topic}`)
+        event.preventDefault()
+    }
+
   render() {
+    const { username, comments, topic } = this.state
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <div>
             <label>Username</label>
-            <input type='text' value={this.state.username} onChange={this.handleUsernameChange}></input>
+            <input type='text' value={username} onChange={this.handleUsernameChange}></input>
         </div>
         <div>
             <label>Comments</label>
-            <textarea value={this.state.comments} onChange={this.handleCommentsChange}></textarea>
+            <textarea value={comments} onChange={this.handleCommentsChange}></textarea>
         </div>
         <div>
             <label>Topic</label>
-            <select value={this.state.topic} onChange={this.handleTopicChange}>
+            <select value={topic} onChange={this.handleTopicChange}>
                 <option value='react'>React</option>
                 <option value='angular'>Angular</option>
                 <option value='vue'>Vue</option>
             </select>
         </div>
+        <button type='submit'>Submit</button>
       </form>
     )
   }
