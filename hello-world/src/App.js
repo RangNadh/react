@@ -24,19 +24,19 @@ function App() {
       {/* <Stylesheet primary= {true}/>  */}
       {/* <NameList /> */}
       {/* <UserGreeting /> */}
-      {/* <ParentComponent />
-      <EventBind />
-      <FunctionClick />
-      <ClassClick />
-      <Counter />
-      <Message /> 
-      <Greet name="Bruce" heroName="Batman">
+      {/* <ParentComponent /> */}
+      {/* <EventBind /> */}
+      {/* <FunctionClick /> */}
+      {/* <ClassClick /> */}
+      {/* <Counter /> */}
+      {/* <Message />  */}
+      {/* <Greet name="Bruce" heroName="Batman">
         <p>This is a children props</p>
       </Greet>
       <Greet name='Clark' heroName="Superman"/> 
-      <Greet name='Diana' heroName="Wonder Women"/>
+      <Greet name='Diana' heroName="Wonder Women"/> */}
       <Welcome name="Bruce" heroName="Batman"></Welcome> 
-      <Hello /> */}
+      {/* <Hello /> */}
     </div>
   );
 }
